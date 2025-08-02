@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to Grocery Management System</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #d0f0e7, #f1f8f4);
+      color: #2d3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background: #1a936f;
+      width: 100%;
+      padding: 30px 0;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(26, 147, 111, 0.4);
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px 20px;
+      background: #ffffffcc;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(26, 147, 111, 0.15);
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    main h2 {
+      color: #1a936f;
+      margin-top: 0;
+      font-weight: 600;
+      font-size: 2rem;
+      border-bottom: 3px solid #1a936f;
+      padding-bottom: 10px;
+      text-align: left;
+    }
+
+    main p {
+      font-weight: 300;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    main p strong {
+      color: #166a4c;
+    }
+
+    .greeting {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #166a4c;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    /* Shop Now button styling */
+    .btn-shop {
+      background-color: #1a936f;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(26, 147, 111, 0.4);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    .btn-shop:hover {
+      background-color: #166a4c;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(22, 106, 76, 0.6);
+    }
+
+    footer {
+      margin-top: auto;
+      width: 100%;
+      background: #166a4c;
+      color: #d0f0e7;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      box-shadow: 0 -3px 8px rgba(22, 106, 76, 0.6);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      main {
+        margin: 20px 10px;
+        padding: 25px 20px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      main h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Grocery Management System</h1>
+  </header>
+
+  <main>
+    <div class="greeting">Welcome! Manage your groceries effortlessly and enjoy a smooth shopping experience.</div>
+
+    <a href="grocerry.html" class="btn-shop" aria-label="Shop Now">Shop Now</a>
+
+    <h2>About Our System</h2>
+    <p>Our Grocery Management System is designed to simplify the way groceries are bought, managed, and billed. Whether you're a store owner or a customer, this system offers a modern, user-friendly interface that makes grocery shopping easy and efficient.</p>
+
+    <h2>Features</h2>
+    <p><strong>User Login:</strong> Secure authentication to keep your data safe.</p>
+    <p><strong>Product Catalog:</strong> Browse products easily by categories.</p>
+    <p><strong>Cart System:</strong> Add, edit, and manage your selected items seamlessly.</p>
+    <p><strong>Billing & Payment Simulation:</strong> Generate bills and simulate payments quickly.</p>
+
+    <h2>Developer</h2>
+    <p><a href="profile.html"><strong>Migara Miniruwan</strong></p></a>
+    <p><strong>Version:</strong> 1.0</p>
+  </main>
+
+  <footer>
+    &copy; 2025 Grocery Management System. All rights reserved.
+  </footer>
+</body>
+</html>
