@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Grocery Management System</title>
+</head>
+
+<body>
+
+  <div class="header-bar">
+    <div class="left-links">
+      <a href="about.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="feedback.html">feedback</a>
+      <a href="profile.html">Creator info</a>
+      
+     
+    </div>
+    <div class="right-icons">
+      <a href="#" class="cart-icon">🛒 Cart <span class="cart-count" id="cart-count">0</span></a>
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+      <a href="https://x.com" target="_blank">X</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
+  </div>
+
+  <center>
+    <h1 id="hedding">Grocery Management System</h1>
+  </center>
+
+  <div class="container">
+    <div class="left-panel">
+      <h2>Select Category</h2>
+      <ul class="category-list">
+        <li onclick="filterItems('all')">All</li>
+        <li onclick="filterItems('vegetables')">Vegetables</li>
+        <li onclick="filterItems('fruits')">Fruits</li>
+        <li onclick="filterItems('snacks')">Snacks</li>
+        <li onclick="filterItems('beverages')">Beverages</li>
+      </ul>
+    </div>
+
+    <div class="right-panel">
+      <h2>Items</h2>
+      <div class="products">
+        <div class="product-card vegetables show" data-name="Carrot" data-price="120">
+          <img src="carrot.jpeg" alt="Carrot" />
+          <div class="name">Carrot</div>
+          <div class="price">Rs. 120/kg</div>
+          <select class="quantity-select">
+            <option>1</option><option>2</option><option>3</option>
+          </select>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card fruits show" data-name="Banana" data-price="100">
+          <img src="banana.webp" alt="Banana" />
+          <div class="name">Banana</div>
+          <div class="price">Rs. 100/dozen</div>
+          <select class="quantity-select">
+            <option>1</option><option>2</option><option>3</option>
+          </select>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card snacks show" data-name="Chips" data-price="80">
+          <img src="chips.jpg" alt="Chips" />
+          <div class="name">Chips</div>
+          <div class="price">Rs. 80</div>
+          <select class="quantity-select">
+            <option>1</option><option>2</option><option>3</option>
+          </select>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card beverages show" data-name="Orange Juice" data-price="150">
+          <img src="juice.jpeg" alt="Juice" />
+          <div class="name">Orange Juice</div>
+          <div class="price">Rs. 150</div>
+          <select class="quantity-select">
+            <option>1</option><option>2</option><option>3</option>
+          </select>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card fruits show" data-name="Apple" data-price="200">
+          <img src="apple.jpg" alt="Apple" />
+          <div class="name">Apple</div>
+          <div class="price">Rs. 200/kg</div>
+          <select class="quantity-select">
+            <option>1</option><option>2</option><option>3</option>
+          </select>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Bubble -->
+  <div class="bill-bubble" id="bill-bubble">
+    <button id="toggle-bill" title="Toggle Cart">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </button>
+    <div class="bill-panel-content" id="bill-panel-content">
+      <h3>Bill Summary</h3>
+
+      <div class="bill-controls">
+        <label><input type="checkbox" id="select-all" /> Select All</label>
+        <button id="delete-selected" class="delete-selected-btn" disabled>Delete Selected</button>
+      </div>
+
+      <div class="bill-items" id="bill-items"></div>
+      <div class="total" id="bill-total">Total: Rs. 0</div>
+     <a href="trans.html"> <button class="proceed-btn">Proceed to Payment</button></a>
+    </div>
+  </div>
+
+ 
+
+  <script src="grocery.js"></script>
+</body>
+</html>

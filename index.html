@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="log">
+
+  <video autoplay muted loop id="bgVideo">
+    <source src="cashier.mp4" type="video/mp4">
+  </video>
+
+  <center><h1 id="myh1">Welcome to Grocerry Management System!</h1></center>
+
+  <div class="topic"></div>
+
+  <div id="form">
+    <form onsubmit="return validateLogin()">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" class="username" placeholder="Enter your username"><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" class="password" placeholder="Enter your password"><br>
+      <input type="checkbox" onclick="togglePassword()"> Show Password<br><br>
+
+      <button type="submit" class="login-btn">Login</button><br><br>
+
+      <a href="#" class="forgot-password">Forgot Password?</a>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordField = document.getElementById("password");
+      passwordField.type = passwordField.type === "password" ? "text" : "password";
+    }
+
+    function validateLogin() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (username === "migara" && password === "migara123") {
+        window.location.href = "about.html";
+        return false; 
+      } else {
+        alert("Invalid username or password!");
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>

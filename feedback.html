@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback - Grocery Management System</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fbeee6, #e0f8ec);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .feedback-box {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      max-width: 550px;
+      width: 90%;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .feedback-box h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #e07a5f;
+      font-size: 2rem;
+    }
+
+    .feedback-box label {
+      font-weight: 500;
+      display: block;
+      margin: 15px 0 5px;
+      color: #444;
+    }
+
+    .feedback-box input,
+    .feedback-box textarea,
+    .feedback-box select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    .feedback-box input:focus,
+    .feedback-box textarea:focus,
+    .feedback-box select:focus {
+      border-color: #3a7c71;
+      outline: none;
+      box-shadow: 0 0 8px rgba(58, 124, 113, 0.2);
+    }
+
+    .feedback-box textarea {
+      resize: vertical;
+    }
+
+    .char-count {
+      text-align: right;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    .feedback-box button {
+      margin-top: 25px;
+      width: 100%;
+      background-color: #3a7c71;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      padding: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .feedback-box button:hover {
+      background-color: #2b5a52;
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 600px) {
+      .feedback-box {
+        padding: 30px 20px;
+      }
+
+      .feedback-box h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="feedback-box">
+    <h2>📝 Rate Your Experience</h2>
+
+    <label for="name">Your Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+    <label for="rating">Your Rating</label>
+    <select id="rating" required>
+      <option value="">-- Select --</option>
+      <option value="5">🌟🌟🌟🌟🌟 Excellent</option>
+      <option value="4">🌟🌟🌟🌟 Good</option>
+      <option value="3">🌟🌟🌟 Average</option>
+      <option value="2">🌟🌟 Poor</option>
+      <option value="1">🌟 Terrible</option>
+    </select>
+
+    <label for="feedback">Your Feedback</label>
+    <textarea id="feedback" rows="4" placeholder="Tell us more..." maxlength="300" oninput="updateCount()" required></textarea>
+    <div class="char-count" id="charCount">0 / 300</div>
+
+    <button onclick="submitFeedback()">Submit Feedback</button>
+  </div>
+
+  <script>
+    function updateCount() {
+      const text = document.getElementById("feedback").value;
+      document.getElementById("charCount").innerText = `${text.length} / 300`;
+    }
+
+    function submitFeedback() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const rating = document.getElementById("rating").value;
+      const feedback = document.getElementById("feedback").value.trim();
+
+      if (!name || !email || !rating || !feedback) {
+        alert("⚠️ Please fill in all fields.");
+        return;
+      }
+
+      let stars = "⭐".repeat(rating);
+
+      alert(`✅ Thank you, ${name}!\n\nYour feedback has been submitted.\n\nRating: ${stars}\nMessage: ${feedback}`);
+
+      // Reset form
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("rating").value = "";
+      document.getElementById("feedback").value = "";
+      updateCount();
+    }
+  </script>
+
+</body>
+</html>
