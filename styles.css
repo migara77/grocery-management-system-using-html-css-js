@@ -1,0 +1,777 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body, input, button {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Background for the login page */
+body.log {
+  background-image: url('background.jpg'); /* Place image in same folder or adjust path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+/* General body color (for other pages, not .log) */
+body {
+  background-color: rgb(178, 190, 124);
+  margin: 0px;
+}
+
+/* Flex container layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left panel */
+.left-panel {
+  background-color: #18545c;
+  flex: 1;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+
+/* Login form container */
+#form {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input fields */
+.username,
+.password {
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  margin: 12px 0;
+  padding: 10px;
+  width: 90%;
+  height: 40px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.username:focus,
+.password:focus {
+  background-color: #fff;
+  border-color: rgb(16, 129, 116);
+  outline: none;
+}
+
+/* Topic heading */
+.topic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 50px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Login Button */
+.login-btn {
+  background-color: rgb(16, 129, 116);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  width: 90%;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: rgb(13, 105, 95);
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #752424;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: rgb(16, 129, 116);
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 480px) {
+  #form {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .username,
+  .password {
+    width: 100%;
+  }
+
+  .login-btn {
+    width: 100%;
+  }
+}
+
+#myh1{
+  color: rgb(17, 45, 68);
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+#myh1{
+  color: #4b7733;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body, input, button {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(178, 190, 124);
+  margin: 0;
+}
+
+/* Header Bar */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d3e50;
+  padding: 10px 30px;
+  color: white;
+}
+
+.header-bar .left-links a,
+.header-bar .right-icons a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header-bar .left-links a:hover,
+.header-bar .right-icons a:hover {
+  color: #e4ae8d;
+}
+
+.header-bar .whatsapp {
+  font-weight: bold;
+  margin-left: 20px;
+  color: #1bd741;
+}
+
+/* Page Title */
+.mytitle{
+  color: rgb(131, 22, 22);
+  margin: 20px 0;
+}
+
+/* Flex container layout */
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Left panel */
+.left-panel {
+  background-color: #90d9e2;
+  flex: 1;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.left-panel h2 {
+  margin-bottom: 15px;
+  color: #114d4d;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+}
+
+.category-list li {
+  background-color: #c3f3f7;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.category-list li:hover {
+  background-color: #90d9e2;
+}
+
+.category-list li.active {
+  background-color: #2d3e50;
+  color: white;
+}
+
+/* Right panel */
+.right-panel {
+  background-color: #b2e1e1;
+  flex: 4;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.right-panel h2 {
+  margin-bottom: 20px;
+  color: #0b5a56;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.product-card.show {
+  display: block;
+}
+
+.product-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card .name {
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+.product-card .price {
+  color: #0e866e;
+  font-weight: bold;
+}
+
+
+/* Quantity Dropdown */
+.quantity-select {
+  margin-top: 10px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #651b1b;
+  font-size: 14px;
+  width: 60%;
+}
+
+/* Add to Cart Button */
+.add-cart-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #25676c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-cart-btn:hover {
+  background-color: #457db1;
+}
+
+/* Cart Icon in Header */
+.cart-icon {
+  font-weight: bold;
+  position: relative;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.cart-count {
+  background-color: red;
+  color: rgb(59, 19, 19);
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 12px;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+}
+
+/* Bill Panel */
+.bill-panel {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: #4f8f96;
+  padding: 20px;
+  width: 260px;
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(222, 183, 183, 0.884);
+  border-radius: 12px;
+  z-index: 100;
+}
+
+.bill-panel h3 {
+  margin-top: 0;
+  color: #4e739c;
+  font-size: 18px;
+  border-bottom: 1px solid #ba1c1c;
+  padding-bottom: 8px;
+}
+
+.bill-items {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* If no items in cart */
+.bill-items.empty::before {
+  content: 'Your cart is empty.';
+  display: block;
+  font-style: italic;
+  color: #9d2b2b;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #0b5a56;
+}
+
+/* Proceed Button */
+.proceed-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  width: 100%;
+  background-color: #0b5a56;
+  color: rgb(33, 194, 73);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.proceed-btn:hover {
+  background-color: #07413d;
+}
+
+/* Product card with dropdown and button spacing */
+.product-card select,
+.product-card button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive Bill Panel */
+@media screen and (max-width: 768px) {
+  .bill-panel {
+    position: static;
+    width: 100%;
+    max-height: none;
+    margin-top: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .right-panel {
+    width: 100%;
+  }
+}
+
+
+/* Bill Bubble */
+.bill-bubble {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #2d3e50;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  z-index: 150;
+  width: 250px;
+  user-select: none;
+}
+
+#toggle-bill {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  outline: none;
+}
+
+#toggle-bill:hover {
+  background-color: #457db1;
+}
+
+/* Hidden panel content initially */
+.bill-panel-content {
+  display: none;
+  background-color: #4f8f96;
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-top: 8px;
+  color: white;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(222, 183, 183, 0.884);
+}
+
+/* Bill items inside the bubble */
+.bill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.bill-item input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.bill-item .bill-name {
+  flex-grow: 1;
+  margin-left: 4px;
+}
+
+.bill-item button.delete-item {
+  background: none;
+  border: none;
+  color: #e75454;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 5px;
+  border-radius: 5px;
+  transition: color 0.3s;
+}
+
+.bill-item button.delete-item:hover {
+  color: #ff0000;
+}
+
+/* Proceed Button */
+.proceed-btn {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: #0b5a56;
+  color: rgb(33, 194, 73);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.proceed-btn:hover {
+  background-color: #07413d;
+}
+
+/* Bill Bubble */
+.bill-bubble {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #2d3e50;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  z-index: 150;
+  width: 280px;
+  user-select: none;
+}
+
+#toggle-bill {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  outline: none;
+}
+
+#toggle-bill:hover {
+  background-color: #457db1;
+}
+
+/* Hidden panel content initially */
+.bill-panel-content {
+  display: none;
+  background-color: #4f8f96;
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-top: 8px;
+  color: white;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(222, 183, 183, 0.884);
+}
+
+/* Bill items inside the bubble */
+.bill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.bill-item input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.bill-item .bill-name {
+  flex-grow: 1;
+  margin-left: 4px;
+}
+
+.bill-item button.delete-item {
+  background: none;
+  border: none;
+  color: #e75454;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 5px;
+  border-radius: 5px;
+  transition: color 0.3s;
+}
+
+.bill-item button.delete-item:hover {
+  color: #ff0000;
+}
+
+/* Bill Controls (select all & delete selected) */
+.bill-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.bill-controls label {
+  cursor: pointer;
+  user-select: none;
+}
+
+#select-all {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.delete-selected-btn {
+  background-color: #b04141;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-selected-btn:disabled {
+  background-color: #7f7f7f;
+  cursor: not-allowed;
+}
+
+.delete-selected-btn:hover:not(:disabled) {
+  background-color: #e94e4e;
+}
+
+/* Proceed Button */
+.proceed-btn {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: #0b5a56;
+  color: rgb(33, 194, 73);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.proceed-btn:hover {
+  background-color: #07413d;
+}
+
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body.payment-body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 150%;
+  min-height: 110%;
+  width: 100%;
+  height: 110%;
+  object-fit: contain; /* Changed from cover to contain */
+  z-index: -2;
+  background: black; /* Fills any space around video */
+}
+
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Main Payment Box */
+.payment-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  z-index: 1;
+}
+
+.payment-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.payment-methods label {
+  margin: 10px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.card-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.card-details-row {
+  display: flex;
+  gap: 10px;
+}
+
+.card-details-row input {
+  flex: 1;
+}
+
+.payment-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-button:hover {
+  background-color: #218838;
+}
+

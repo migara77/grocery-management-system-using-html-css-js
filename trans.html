@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payment - Grocery Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="payment-body">
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="cashier.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Payment Container -->
+  <div class="payment-container">
+    <h2>Choose Payment Method</h2>
+    
+    <div class="payment-methods">
+      <label>
+        <input type="radio" name="payment" value="credit-card" checked />
+        Credit/Debit Card
+      </label>
+      <label>
+        <input type="radio" name="payment" value="paypal" />
+        PayPal
+      </label>
+      <label>
+        <input type="radio" name="payment" value="cash" />
+        Cash on Delivery
+      </label>
+    </div>
+
+    <form class="card-form">
+      <h3>Card Details</h3>
+      <input type="text" placeholder="Cardholder Name" required />
+      <input type="text" placeholder="Card Number" maxlength="16" required />
+      <div class="card-details-row">
+        <input type="text" placeholder="MM/YY" maxlength="5" required />
+        <input type="text" placeholder="CVV" maxlength="3" required />
+      </div>
+      <button type="submit" class="payment-button">Proceed to Pay</button>
+    </form>
+  </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.card-form');
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Stop default submission
+
+        // Optionally validate here...
+
+        // Redirect to the success page
+        window.location.href = "transaction-success.html";
+      });
+    }
+  });
+</script>
+
+
+
+
+
+</body>
+</html>
